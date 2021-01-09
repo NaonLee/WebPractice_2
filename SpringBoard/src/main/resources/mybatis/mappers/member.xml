@@ -23,38 +23,36 @@
 
 	<select id="selectAllMemberList" resultMap="memResult">
       <![CDATA[
-         select * from t_member	order by joinDate desc	 	
+         SELECT * FROM t_member	ORDER BY joinDate DESC	 	
       ]]>
 	</select>
     
   <insert id="insertMember"  parameterType="memberVO">
 		<![CDATA[
-		 insert into t_member(id,pwd, name, email)
-		 values(#{id}, #{pwd}, #{name}, #{email})
+		 INSERT INTO t_member(id,pwd, name, email)
+		 VALUES(#{id}, #{pwd}, #{name}, #{email})
 		]]>      
 	</insert>
 	
    
    <update id="updateMember"  parameterType="memberVO">
      <![CDATA[
-	     update t_member
-	     set pwd=#{pwd}, name=#{name}, email=#{email}
-	     where
-	     id=#{id}
+	     UPDATE t_member
+	     SET pwd=#{pwd}, name=#{name}, email=#{email}
+	     WHERE id=#{id}
       ]]>      
    </update> 
      
    <delete id="deleteMember"  parameterType="String">
 	<![CDATA[
-	   delete from  t_member
-	   where
-	   id=#{id}
+	   DELETE FROM  t_member
+	   WHERE id=#{id}
 	]]>      
   </delete>
   <select id="loginById"  resultType="memberVO"   parameterType="memberVO" >
 	<![CDATA[
-		select * from t_member	
-		where id=#{id} and pwd=#{pwd}		
+		SELECT * FROM t_member	
+		WHERE id=#{id} AND pwd=#{pwd}		
 	]]>
   </select>
 </mapper>
