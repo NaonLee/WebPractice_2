@@ -19,17 +19,18 @@
   <tr>
      <td>
 		<a href="${contextPath}/main.do">
-			<img src="${contextPath}/resources/image/duke_swing.gif"  />
+			<img src="${contextPath}/resources/image/ch.PNG" width="100" height="100" />
 		</a>
      </td>
      <td>
        <h1><font size=30>Spring board homepage</font></h1>
      </td>
      
+     <!-- present login/out status -->
      <td>
-       <c:choose><!-- present login/out status -->
+       <c:choose>
           <c:when test="${isLogOn == true  && member!= null}">
-            <h3>Welcome. ${member.name }님!</h3>
+            <h3>Welcome. ${member.name }!</h3>
             <a href="${contextPath}/member/logout.do"><h3>Logout</h3></a>
           </c:when>
           <c:otherwise>
