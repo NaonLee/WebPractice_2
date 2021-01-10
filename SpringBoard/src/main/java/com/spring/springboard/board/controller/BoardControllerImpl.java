@@ -39,7 +39,7 @@ public class BoardControllerImpl implements BoardController{
 	BoardService boardService;
 	
 	@Override	//list all articles
-	@RequestMapping(value="/board/listArticle.do", method=RequestMethod.GET)
+	@RequestMapping(value="/board/listArticles.do", method=RequestMethod.GET)
 	public ModelAndView listArticles(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		String viewName = (String)request.getAttribute("viewName");		//Intercepter에서 request에 바인딩
 		List articlesList = boardService.listArticles();

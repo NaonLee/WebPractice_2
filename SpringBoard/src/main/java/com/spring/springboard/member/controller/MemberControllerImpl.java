@@ -29,6 +29,7 @@ public class MemberControllerImpl   implements MemberController {
 	//Main page
 	@RequestMapping(value = { "/","/main.do"}, method = RequestMethod.GET)
 	private ModelAndView main(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("call main");
 		String viewName = (String)request.getAttribute("viewName");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName(viewName);
@@ -38,6 +39,7 @@ public class MemberControllerImpl   implements MemberController {
 	@Override	//List all members
 	@RequestMapping(value="/member/listMembers.do" ,method = RequestMethod.GET)
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("call listMembers");
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("html/text;charset=utf-8");
 		String viewName = (String)request.getAttribute("viewName");
@@ -117,7 +119,7 @@ public class MemberControllerImpl   implements MemberController {
 		return mav;
 	}	
 
-	//Request the form(jsps)
+	//Request the form(memberForm, loginForm)
 	@RequestMapping(value = "/member/*Form.do", method =  RequestMethod.GET)
 	private ModelAndView form(@RequestParam(value= "result", required=false) String result,
 							  @RequestParam(value= "action", required=false) String action,

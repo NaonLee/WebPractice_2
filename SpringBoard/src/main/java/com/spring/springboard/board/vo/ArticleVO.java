@@ -20,7 +20,7 @@ public class ArticleVO {
 	
 	
 	public ArticleVO() {
-		System.out.println("ArticleVO »ý¼ºÀÚ");
+		System.out.println("ArticleVO has been created");
 	}
 
 	public int getArticleNO() {
