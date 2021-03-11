@@ -1,4 +1,15 @@
 @charset "UTF-8";
+
+.introduction{
+	margin-left: 30px;
+	
+}
+
+#skill{
+	margin-right: 100px;
+	float:left;
+}
+
 table{
 	border: 1px solid;
 	text-align: center;
