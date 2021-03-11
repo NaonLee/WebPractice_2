@@ -1,8 +1,17 @@
 @charset "UTF-8";
 
-.introduction{
+div{
 	margin-left: 30px;
 	
+}
+hr{
+	clear:both;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.skillset{
+	 height: 150px;
 }
 
 #skill{
