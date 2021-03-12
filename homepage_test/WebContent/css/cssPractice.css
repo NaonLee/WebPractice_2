@@ -4,6 +4,11 @@ div{
 	margin-left: 30px;
 	
 }
+
+li a{
+	color: black;
+}
+
 hr{
 	clear:both;
 	margin-top: 30px;
@@ -12,6 +17,11 @@ hr{
 
 .skillset{
 	 height: 150px;
+}
+
+.skillset ul li{
+	font-size: 16px;
+	font-weight: bold;
 }
 
 #skill{
@@ -24,10 +34,22 @@ table{
 	text-align: center;
 	border-collapse: collapse;
 }
+
+table td:hover{
+	background-color: grey;	
+}
+
+table caption{
+	font-size:20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
 th {
 	border: 1px solid;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
+	background-color: #dcdcdc;
 }
 td{
 	border: 1px solid;
